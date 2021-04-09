@@ -56,10 +56,12 @@ public class CheckingTest {
     public void shouldKeepBalance() {
         Checking account = new Checking();
 
+
         assertTrue(account.deposit(11000)); //6000
         assertFalse(account.deposit(4000));
         assertFalse(account.deposit(5000));
         assertTrue(account.deposit(21000)); // 16000
+
 
         assertTrue(account.processCheck(new Check(15000, LocalDate.now().plusMonths(1)))); // 10000
         assertFalse(account.processCheck(new Check(5000, LocalDate.now().plusMonths(1))));
@@ -67,6 +69,7 @@ public class CheckingTest {
         assertFalse(account.processCheck(new Check(10000, LocalDate.now().minusMonths(1))));
 
         assertTrue(Double.compare(32000, account.getBalance()) == 0);
+
     }
 
 }

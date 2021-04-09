@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -20,7 +21,7 @@ public class SabanaPayrollTest {
 
     private static EmployeeBySalary employeeBySalary;
     private static EmployeeByHours employeeByHours;
-    private static EmployeeByCommission employeeByCommission;
+    private static EmployeeByComission employeeByCommission;
 
     private static SabanaPayroll sabanaPayroll;
 
@@ -28,11 +29,11 @@ public class SabanaPayrollTest {
     public static void setUp() {
         faker = new Faker(new Locale("en-US"));
 
-        department = new Department("Engineering");
+        department = new Department("Engineering", UUID.randomUUID());
 
         employeeBySalary = new EmployeeBySalary(faker.name().firstName(), faker.name().lastName(), department, 1000000);
         employeeByHours = new EmployeeByHours(faker.name().firstName(), faker.name().lastName(), department, 40);
-        employeeByCommission = new EmployeeByCommission(faker.name().firstName(), faker.name().lastName(), department, 100);
+        employeeByCommission = new EmployeeByComission(faker.name().firstName(), faker.name().lastName(), department, 100);
 
         employees = new ArrayList<>();
         employees.add(employeeBySalary);

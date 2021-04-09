@@ -1,10 +1,14 @@
 package edu.sabana.poob.sabanapayroll;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class BankAccount {
 
     public static final int TAX_4_1000 = 4;
 
     private double balance;
+    private List<Employee> employees = new ArrayList<>();
 
     /**
      * Inicializa una cuenta.
@@ -14,7 +18,7 @@ public abstract class BankAccount {
     }
 
     /**
-     * Obtiene el porcentaje del deposito.
+     *Obtiene el porcentaje del deposito.
      *
      * @return
      */
@@ -32,7 +36,15 @@ public abstract class BankAccount {
      * @return Si la operación fue exitosa.
      */
     public boolean deposit(double amount) {
-        return false;
+        boolean result = false;
+
+        if (amount>getDepositDiscount())
+        {
+            result=true;
+            this.balance=this.balance+amount-getDepositDiscount();
+        }
+
+        return result;
     }
 
     /**
@@ -59,10 +71,13 @@ public abstract class BankAccount {
         return balance;
     }
 
-    private void setBalance(double balance) throws Exception {
+    public void setBalance(double balance) throws Exception {
         if (balance < 0)
             throw new Exception("Error en el deposito");
 
         this.balance = balance;
     }
+
+
+
 }
