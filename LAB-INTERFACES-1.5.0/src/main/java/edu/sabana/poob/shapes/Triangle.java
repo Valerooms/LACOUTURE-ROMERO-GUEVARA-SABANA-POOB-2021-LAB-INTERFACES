@@ -43,8 +43,12 @@ public class Triangle extends Shape implements GeometricShape2D{
     }
 
     public double getArea(){
+        if (side1 ==side2 && side1==side3){
+            return (side1*side2)/2;
+        }
+        else{
         double altura = Math.sqrt(Math.pow(side1,2)-Math.pow(side2/2,2));
-        return (side2*altura)/2;
+        return (side2*altura)/2;}
     }
 
     public double getPerimeter(){

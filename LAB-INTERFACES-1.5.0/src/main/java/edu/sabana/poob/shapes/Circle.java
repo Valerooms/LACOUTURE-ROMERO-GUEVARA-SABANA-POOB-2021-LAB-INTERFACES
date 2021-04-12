@@ -26,7 +26,7 @@ public class Circle extends Shape implements GeometricShape2D {
         return this.radius*2;
     }
 
-    @Override
+                                                                                                                                  @Override
     public double getArea() {
         return this.radius*this.radius*PI;
     }
@@ -35,21 +35,5 @@ public class Circle extends Shape implements GeometricShape2D {
     public double getPerimeter() {
         return 2*PI*this.radius;
     }
-
-   /* @Override
-    public String toString()
-    {
-        if (this.radius%1==0)
-        {
-            return super.toString()+ " and radius "+(int)this.radius;
-        }
-        else {
-            return super.toString()+ " and radius "+this.radius;
-        }
-
-
-    }
-
-    */
 
 }

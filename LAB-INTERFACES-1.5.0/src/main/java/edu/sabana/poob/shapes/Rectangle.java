@@ -4,6 +4,7 @@ public class Rectangle extends Shape implements GeometricShape2D{
     private double width =1;
     private double length =1;
 
+
     public Rectangle() {
 
     }
