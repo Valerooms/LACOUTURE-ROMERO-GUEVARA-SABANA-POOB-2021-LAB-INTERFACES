@@ -26,7 +26,7 @@ public class CircleTest {
     public void shouldCalculateArea() {
         assertEquals(314, (int) c1.getArea());
         assertEquals(660, (int) c2.getArea());
-        assertEquals(1735, (int) c3.getArea());
+        assertEquals(1734, (int) c3.getArea());
         assertEquals(3, (int) c4.getArea());
     }
 
@@ -55,6 +55,7 @@ public class CircleTest {
         assertTrue(c2.toStringGeometricShape2D().contains("This is a Circle"));
         assertTrue(c3.toStringGeometricShape2D().contains("This is a Circle"));
         assertTrue(c4.toStringGeometricShape2D().contains("This is a Circle"));
+        System.out.println(c1.toStringGeometricShape2D());
     }
 
 }

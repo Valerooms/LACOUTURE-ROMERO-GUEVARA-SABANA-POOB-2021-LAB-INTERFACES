@@ -36,7 +36,7 @@ public class Circle extends Shape implements GeometricShape2D {
         return 2*PI*this.radius;
     }
 
-    @Override
+   /* @Override
     public String toString()
     {
         if (this.radius%1==0)
@@ -47,5 +47,9 @@ public class Circle extends Shape implements GeometricShape2D {
             return super.toString()+ " and radius "+this.radius;
         }
 
+
     }
+
+    */
+
 }
