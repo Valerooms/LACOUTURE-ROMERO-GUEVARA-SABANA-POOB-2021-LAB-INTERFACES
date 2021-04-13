@@ -8,6 +8,10 @@ public class SabanaPayroll
     double salary=0;
     private List<Department> departments=new ArrayList<>();
     private double employeeBalance;
+    private ColsubsidioFund colsubsidioFund = new ColsubsidioFund();
+    private CompensarFund compensarFund = new CompensarFund();
+    private CafamFund cafamFund = new CafamFund();
+
 
     private Collection<Employee> employees;
     private Map<String, IFamilyCompensationFund> compensationFunds;
@@ -18,6 +22,11 @@ public class SabanaPayroll
 
         this.compensationFunds.put(ColsubsidioFund.class.getSimpleName(), new ColsubsidioFund());
     }
+
+    public SabanaPayroll() {
+
+    }
+
     /**
      * Calculates the salary of an specific employee
      * @param employeeId
@@ -119,7 +128,34 @@ public class SabanaPayroll
         }
         return result;
     }
-    public boolean assigneFamilyCompensation(String IFamilyCompensationFund, UUID employeeId) {
-        return false;
+
+    public boolean assigneFamilyCompensation(String IFamilyCompensationFund, UUID employeeId)
+    {
+
+        boolean resutl = false;
+        for (Department d : this.departments)
+        {
+            for (Employee e: d.getEmployees())
+            {
+                if (IFamilyCompensationFund.equals("Colsubsidio"))
+                {
+                    colsubsidioFund.registerEmployee(e);
+                    resutl=true;
+                }
+                if (IFamilyCompensationFund.equals("Compensar"))
+                {
+                    compensarFund.registerEmployee(e);
+                    resutl=true;
+                }
+                if (IFamilyCompensationFund.equals("Cafam"))
+                {
+                    cafamFund.registerEmployee(e);
+                    resutl=true;
+                }
+
+            }
+        }
+        return resutl;
+
     }
 }

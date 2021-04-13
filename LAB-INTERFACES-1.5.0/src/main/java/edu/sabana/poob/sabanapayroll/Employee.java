@@ -9,6 +9,9 @@ public abstract class Employee
     public String lastName;
     public Department department;
     private BankAccount account;
+    private ColsubsidioFund colsubsidio;
+    private CompensarFund compensar;
+    private CafamFund cafam;
 
     public Employee(String name, String lastName, Department department)
     {
@@ -46,6 +49,7 @@ public abstract class Employee
     {
         return this.lastName;
     }
+
 
 
 }
