@@ -1,14 +1,12 @@
 package edu.sabana.poob.sabanapayroll;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
-public class CompensarFund implements IFamilyCompensationFund{
+public class CafamFund implements IFamilyCompensationFund{
 
-    private static List<UUID> registeredEmployees = new ArrayList<>();
+    private static Set<UUID> registeredEmployees = new HashSet<>();
 
-    public CompensarFund(){}
+    public CafamFund(){}
 
     @Override
     public boolean registerEmployee(Employee employee) {
