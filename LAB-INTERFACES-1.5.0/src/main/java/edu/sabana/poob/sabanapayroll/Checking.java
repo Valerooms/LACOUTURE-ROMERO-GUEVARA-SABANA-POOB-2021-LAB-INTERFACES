@@ -25,18 +25,6 @@ public class Checking extends BankAccount {
             }
 
         }
-            /*
-            else
-            {
-                try {
-                    setBalance(0);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-             */
-
 
         return result;
     }

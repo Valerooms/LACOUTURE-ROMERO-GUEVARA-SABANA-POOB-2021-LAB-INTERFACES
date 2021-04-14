@@ -22,7 +22,7 @@ public class TriangleTest {
 
     @Test
     public void ShouldCalculateArea(){
-        assertEquals((int)(25*Math.sqrt(3)),(int)t1.getArea());
+        assertEquals((int)(50),(int)t1.getArea());
         assertEquals((int)(8*Math.sqrt(2)),(int)t2.getArea());
         assertEquals((int)((1/4)*Math.sqrt(3)),(int)t3.getArea());
         assertEquals((int)((1/4)*Math.sqrt(3)),(int)t4.getArea());
