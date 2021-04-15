@@ -18,6 +18,7 @@ public class SabanaPayrollTest {
 
     private static List<Employee> employees;
     private static Department department;
+    private static List<Department> departments;
 
     private static EmployeeBySalary employeeBySalary;
     private static EmployeeByHours employeeByHours;
@@ -40,7 +41,14 @@ public class SabanaPayrollTest {
         employees.add(employeeByHours);
         employees.add(employeeByCommission);
 
+        departments= new ArrayList<>();
+        departments.add(department);
+
         sabanaPayroll = new SabanaPayroll(employees);
+
+        sabanaPayroll.setDepartments(departments);
+
+        department.setEmployees(employees);
     }
 
     @Test

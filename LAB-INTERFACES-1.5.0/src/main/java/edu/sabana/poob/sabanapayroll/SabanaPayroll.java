@@ -137,17 +137,17 @@ public class SabanaPayroll
         {
             for (Employee e: d.getEmployees())
             {
-                if (IFamilyCompensationFund.equals("Colsubsidio"))
+                if (IFamilyCompensationFund.equals("ColsubsidioFund"))
                 {
                     colsubsidioFund.registerEmployee(e);
                     resutl=true;
                 }
-                if (IFamilyCompensationFund.equals("Compensar"))
+                if (IFamilyCompensationFund.equals("CompensarFund"))
                 {
                     compensarFund.registerEmployee(e);
                     resutl=true;
                 }
-                if (IFamilyCompensationFund.equals("Cafam"))
+                if (IFamilyCompensationFund.equals("CafamFund"))
                 {
                     cafamFund.registerEmployee(e);
                     resutl=true;

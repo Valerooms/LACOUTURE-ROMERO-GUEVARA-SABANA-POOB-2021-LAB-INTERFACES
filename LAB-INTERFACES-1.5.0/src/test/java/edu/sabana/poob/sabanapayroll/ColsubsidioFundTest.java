@@ -22,6 +22,7 @@ public class ColsubsidioFundTest {
     private static EmployeeBySalary employeeBySalary;
     private static EmployeeByHours employeeByHours;
     private static EmployeeByComission employeeByCommission;
+    private static EmployeeBySalary employeeBySalary1;
 
     private static IFamilyCompensationFund colsubsidioFund;
 
@@ -34,11 +35,13 @@ public class ColsubsidioFundTest {
         employeeBySalary = new EmployeeBySalary(faker.name().firstName(), faker.name().lastName(), department, 1000000);
         employeeByHours = new EmployeeByHours(faker.name().firstName(), faker.name().lastName(), department, 40);
         employeeByCommission = new EmployeeByComission(faker.name().firstName(), faker.name().lastName(), department, 100);
+        employeeBySalary1 = new EmployeeBySalary(faker.name().firstName(), faker.name().lastName(), department, 10);
 
         employees = new ArrayList<>();
         employees.add(employeeBySalary);
         employees.add(employeeByHours);
         employees.add(employeeByCommission);
+        employees.add(employeeBySalary1);
 
         colsubsidioFund = new ColsubsidioFund();
     }
@@ -47,7 +50,7 @@ public class ColsubsidioFundTest {
     @DisplayName("GIVEN a employee by salary WHEN try to register THEN success")
     public void shouldRegisterEmployee() {
 
-        assertTrue(colsubsidioFund.registerEmployee(employeeBySalary));
+        assertTrue(colsubsidioFund.registerEmployee(employeeByHours));
     }
 
     @Test
@@ -84,8 +87,8 @@ public class ColsubsidioFundTest {
     @DisplayName("GIVEN a employee by salary registered WHEN try to validate is registered THEN success")
     public void shouldValidateEmployeeIsRegistered() {
 
-        assertTrue(colsubsidioFund.registerEmployee(employeeBySalary));
-        assertTrue(colsubsidioFund.isEmployeeRegistered(employeeBySalary.getId()));
+        assertTrue(colsubsidioFund.registerEmployee(employeeBySalary1));
+        assertTrue(colsubsidioFund.isEmployeeRegistered(employeeBySalary1.getId()));
     }
 
     @Test
