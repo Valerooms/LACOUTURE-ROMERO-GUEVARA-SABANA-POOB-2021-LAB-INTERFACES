@@ -9,6 +9,7 @@ Circle implementa Geometric Shape2D
 Cylinder implementa Geometric Shape3D
 
 PRUEBAS
+![image](https://user-images.githubusercontent.com/78030533/115079067-397ae280-9ec6-11eb-8f8f-6415edf31271.png)
 
 SHAPES 
 
