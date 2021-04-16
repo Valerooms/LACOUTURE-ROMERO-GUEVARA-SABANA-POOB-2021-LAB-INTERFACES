@@ -8,6 +8,10 @@ Circle implementa Geometric Shape2D
 - ¿Cuál es la relación entre `Cylinder` y `GeometricShape3D`?
 Cylinder implementa Geometric Shape3D
 
+PARTE III
+![Diagrama de clases Shape](https://user-images.githubusercontent.com/78276253/115082500-a04eca80-9ecb-11eb-96a9-2a1938000ece.png)
+
+
 PRUEBAS
 ![image](https://user-images.githubusercontent.com/78030533/115079067-397ae280-9ec6-11eb-8f8f-6415edf31271.png)
 
