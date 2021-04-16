@@ -11,6 +11,16 @@ Cylinder implementa Geometric Shape3D
 PARTE III
 ![Diagrama de clases Shape](https://user-images.githubusercontent.com/78276253/115082500-a04eca80-9ecb-11eb-96a9-2a1938000ece.png)
 
+PARTE V
+1.
+![555555](https://user-images.githubusercontent.com/78030533/115082965-56b2af80-9ecc-11eb-9597-4ece9d4200de.jpeg)
+
+2.
+![image](https://user-images.githubusercontent.com/78030533/115082839-29fe9800-9ecc-11eb-934a-85ed48e15172.png)
+
+PARTE VI
+![666666](https://user-images.githubusercontent.com/78030533/115083036-6df19d00-9ecc-11eb-8ed0-e2b8e2dada7d.jpeg)
+
 
 PRUEBAS
 ![image](https://user-images.githubusercontent.com/78030533/115079067-397ae280-9ec6-11eb-8f8f-6415edf31271.png)
